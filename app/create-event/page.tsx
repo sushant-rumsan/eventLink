@@ -66,6 +66,7 @@ export default function CreateEventPage() {
     if (writeContract) {
       writeContract({
         address: EVENT_MANAGER_ADDRESS,
+        //@ts-ignore
         args,
       });
     }
