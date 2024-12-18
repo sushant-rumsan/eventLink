@@ -20,6 +20,7 @@ export default function EventListPage() {
     functionName: "getActiveEvents",
     query: {
       select(data) {
+        //@ts-ignore
         return formatDynamicEventData(data) || [];
       },
     },

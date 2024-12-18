@@ -108,7 +108,7 @@ export default function CreateEventPage() {
             ))}
           </Stepper>
           <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
-            <AnimatePresence mode='wait'>
+            <AnimatePresence>
               <motion.div
                 key={currentStep}
                 initial={{ opacity: 0, x: 20 }}

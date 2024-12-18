@@ -42,6 +42,7 @@ export default function EventDetailsPage() {
     args: [id as string],
     query: {
       select(data) {
+        //@ts-ignore
         return formatDynamicEventData(data, [
           "username",
           "secretCorrect",
@@ -120,6 +121,7 @@ export default function EventDetailsPage() {
               onClick={() =>
                 joinEvent({
                   address: EVENT_MANAGER_ADDRESS,
+                  //@ts-ignore
                   args: [id as string, getMergedHash(address, secretCode)],
                 })
               }>
@@ -202,6 +204,7 @@ export default function EventDetailsPage() {
         transition={{ duration: 0.5, delay: 0.2 }}>
         <Button
           variant='destructive'
+          //@ts-ignore
           onClick={() => removeEvent()}
           className='w-full'>
           Remove Event
